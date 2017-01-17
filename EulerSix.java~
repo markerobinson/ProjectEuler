@@ -1,0 +1,25 @@
+public class EulerSix {
+  public static void main(String[] args) {
+    int upperlimit = 100;
+    System.out.println("The sum of squares is " + sumsquare(upperlimit));
+    System.out.println("The square of sums is " + squaresum(upperlimit));
+  }
+  
+  public static int sumsquare(int value) {
+    int sum = 0;
+    for (int i = 1; i <= value; i++) {
+      sum = sum + (i ^ 2);
+      System.out.println(sum);
+    }
+    return sum;
+  }
+  
+  public static int squaresum(int value) {
+    int sum = 0;
+    for (int i = 1; i <= value; i++) {
+      sum = sum + i;
+    }
+    int squaresum = sum ^ 2;
+    return squaresum;
+  }
+}

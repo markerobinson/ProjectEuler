@@ -1,0 +1,13 @@
+public class EulerFour {
+  public static void main(String[] args) {
+    checkPalindrome(9009);
+  }
+  public static boolean checkPalindrome(int value) {
+    String text = Integer.toString(value);
+    String reverse = new StringBuffer(text).reverse().toString();
+    if (text.equals(reverse)) {
+      return true;
+    } else {
+      return false;
+    }
+  }
